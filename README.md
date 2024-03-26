@@ -71,3 +71,58 @@
         Yellow = 200,
         Green = 300
     }
+Методы преобразования типов переменных:
+            
+            int olddata = 6;
+            long data = (long)olddata;
+
+            int olddata = 5;
+            string data = olddata.tostring();
+
+            console.writeline("enter your age: ");
+            int age = convert.toint32(console.readline());
+            console.writeline("your age is {0}", age);
+            console.readkey();
+
+            // parse - методы, который при наличии ошибки он возвращает
+            // эту ошибку и не производит дальнейших операций.
+            // tryparse - метод, возвращающий булевое значение в
+            // зависимости от того, было ли преобразование удачным.
+            console.write("enter your age: ");
+            int age = int.parse(console.readline());
+            console.writeline("your age is {0} ", age);
+            console.readkey();
+
+            console.write("enter your age: ");
+            int age;
+            bool iscorrect = int.tryparse(console.readline(), out age);
+            console.writeline("your age is {0} ", age);
+            console.readkey();
+
+            console.write("enter your age: ");
+            byte age = (byte)int.parse(console.readline());
+            console.writeline("age is {0} ", age);
+            console.readkey();
+
+            // checked - служебное слово помогающее проверить,
+            // возможно ли преобразование без потерим данных
+
+            console.write("enter your name: ");
+            string name = console.readline();
+            console.write("enter your age: ");
+            byte age = checked((byte)int.parse(console.readline()));
+            console.writeline("your name is {0} and age is {1} ", name, age);
+            console.writeline("what is your favorite day a week?");
+            dayofweek day = (dayofweek)int.parse(console.readline());
+            console.writeline($"your favorite day is {day}");
+            console.readkey();
+
+            var name = Console.ReadLine();
+
+            var age = checked((byte)int.Parse(Console.ReadLine()));
+            Console.WriteLine("Your name is {0} and age is {1} ", name, age);
+
+            Console.Write("What is your favorite day of week? ");
+
+            var day = (DayOfWeek)int.Parse(Console.ReadLine());
+            Console.WriteLine("Your favorite day is {0}", day);
