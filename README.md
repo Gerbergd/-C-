@@ -49,3 +49,8 @@
 	Console.WriteLine("MyAge " + MyAge);
 	Console.WriteLine("Do I have a pet? " + HaveIApet);
 	Console.WriteLine("My shoe size is " + MyShoeSize);
+
+Как определять минимальное и максимальное значения любого типа (на примере целочисленного типа):
+	
+	Console.WriteLine("IntMax {0}", int.MaxValue);
+	Console.WriteLine("IntMin {0}", int.MinValue);
