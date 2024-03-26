@@ -30,3 +30,10 @@
 		Console.WriteLine("\u0040");
 		Console.WriteLine("\x23")
 		Console.ReadKey();
+
+Использование логических литералов:
+
+	Console.WriteLine(true);
+    Console.WriteLine(false);
+    
+    Console.ReadKey();
