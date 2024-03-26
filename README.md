@@ -1,9 +1,5 @@
 # Язык C#
 Программа по инициализации переменной:
-using System;
-
-class MainClass {
-  public static void Main (string[] args) {
 
 	 string myName;
 	 myName = "Jane";
@@ -11,13 +7,8 @@ class MainClass {
 	 Console.WriteLine(myName);
 	 
 	 Console.ReadKey();
-  }
-}
 
 Использование строкового литерала:
-static void Main(string[] args)
-{
-    const string MyName = "Jane";
     
     Console.WriteLine(MyName);
 
@@ -26,4 +17,3 @@ static void Main(string[] args)
     Console.WriteLine("My name is Jane");
 
     Console.ReadKey();
-}
