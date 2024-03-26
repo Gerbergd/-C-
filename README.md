@@ -54,3 +54,20 @@
 	
 	Console.WriteLine("IntMax {0}", int.MaxValue);
 	Console.WriteLine("IntMin {0}", int.MinValue);
+
+Перечисления (enum):
+
+	//const byte Monday = 1;
+    //const byte Tuesday = 2;
+    //const byte Wednesday = 3;
+    //const byte Thursday = 4;
+    //const byte Friday = 5;
+    //const byte Saterday = 6;
+    //const byte Sunday = 7;
+    // Такой вариант записи не эффективен, воспользуемся перечислением
+    enum Semaphore : short
+    {
+		Red = 100,
+        Yellow = 200,
+        Green = 300
+    }
