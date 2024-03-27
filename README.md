@@ -185,3 +185,40 @@
 
                 Console.WriteLine("Your color is cyan!");
             }
+
+Использование switch-конструкции:
+
+            Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+
+            var color = Console.ReadLine();
+
+            switch (color)
+            {
+                case "red":
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("Your color is red!");
+                    break;
+
+                case "green":
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("Your color is green!");
+                    break;
+
+                default:
+                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("Your color is cyan!");
+                    break;
+            }
+            //Блок *default* — это если значение не соответствует ни одному из условий.
+            //Он является правилом хорошего тона, но его можно опустить.
+            //Оператор *break* показывает, где кончилась последовательность действий для заданного условия.
+            //Он обязателен, но можно также использовать вместо него другие операторы перехода: goto case, return или throw.
+            //* return — это выход из метода, применять его будем позже.
+            //* goto case — позволяет перейти к другому условию внутри блока switch.
+            //* throw применяется для выбора ошибок, и мы рассмотрим его в других модулях.
