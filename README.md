@@ -1,5 +1,5 @@
 # Язык C#
-Программа по инициализации переменной:
+#### Программа по инициализации переменной:
 
 	 string myName;
 	 myName = "Jane";
@@ -8,7 +8,7 @@
 	 
 	 Console.ReadKey();
 
-Использование строкового литерала:
+#### Использование строкового литерала:
     
     Console.WriteLine(MyName);
 
@@ -18,7 +18,7 @@
 
     Console.ReadKey();
 
-Использование символьного литерала:
+#### Использование символьного литерала:
 
 	const string MyName = "Jane";
 
@@ -31,14 +31,14 @@
 	Console.WriteLine("\x23")
 	Console.ReadKey();
 
-Использование логических литералов:
+#### Использование логических литералов:
 
 	Console.WriteLine(true);
     Console.WriteLine(false);
     
     Console.ReadKey();
 
-Изучение типов переменных:
+#### Изучение типов переменных:
 
 	string MyName = "Jane";
 	byte MyAge = 27;
@@ -50,12 +50,12 @@
 	Console.WriteLine("Do I have a pet? " + HaveIApet);
 	Console.WriteLine("My shoe size is " + MyShoeSize);
 
-Как определять минимальное и максимальное значения любого типа (на примере целочисленного типа):
+#### Как определять минимальное и максимальное значения любого типа (на примере целочисленного типа):
 	
 	Console.WriteLine("IntMax {0}", int.MaxValue);
 	Console.WriteLine("IntMin {0}", int.MinValue);
 
-Перечисления (enum):
+#### Перечисления (enum):
 
 	//const byte Monday = 1;
     //const byte Tuesday = 2;
@@ -71,7 +71,7 @@
         Yellow = 200,
         Green = 300
     }
-Методы преобразования типов переменных:
+#### Методы преобразования типов переменных:
             
             int olddata = 6;
             long data = (long)olddata;
@@ -127,7 +127,7 @@
             var day = (DayOfWeek)int.Parse(Console.ReadLine());
             Console.WriteLine("Your favorite day is {0}", day);
 
-Использование условных операций (if, else if, else):
+#### Использование условных операций (if, else if, else):
             
             var a = 6;
             var b = 7;
@@ -146,7 +146,7 @@
                 Console.WriteLine("Значение b = {0}", b);
             }
 
-Использование сокращённой записи условной операции if/else:
+#### Использование сокращённой записи условной операции if/else:
             
             var a = 6;
             var b = 7;
@@ -157,7 +157,7 @@
             // после : пишется ответ если условие ложно.
             Console.WriteLine(c);
 
-Окрашивание фона букв и цвет контура букв:
+#### Окрашивание фона букв и цвет контура букв:
 
             Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
 
