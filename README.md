@@ -145,3 +145,43 @@
             {
                 Console.WriteLine("Значение b = {0}", b);
             }
+
+Использование сокращённой записи условной операции if/else:
+            
+            var a = 6;
+            var b = 7;
+
+            var c = a != b ? a + b : b;
+
+            // a != b - условие, после ? пишется ответ если условие истинно,
+            // после : пишется ответ если условие ложно.
+            Console.WriteLine(c);
+
+Окрашивание фона букв и цвет контура букв:
+
+            Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+
+            var color = Console.ReadLine();
+
+            if (color == "red")
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Your color is red!");
+            }
+
+            else if (color == "green")
+            {
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Your color is green!");
+            }
+            else
+            {
+                Console.BackgroundColor = ConsoleColor.Cyan;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Your color is cyan!");
+            }
