@@ -126,3 +126,22 @@
 
             var day = (DayOfWeek)int.Parse(Console.ReadLine());
             Console.WriteLine("Your favorite day is {0}", day);
+
+Использование условных операций (if, else if, else):
+            
+            var a = 6;
+            var b = 7;
+
+            if (a == b && b > 1)
+            {
+                Console.WriteLine("Условие истинно");
+            }
+
+            else if (b > 10 || b == 7)
+            {
+                Console.WriteLine("Значение b = {0} больше 10 или равно 7", b);
+            }
+            else
+            {
+                Console.WriteLine("Значение b = {0}", b);
+            }
