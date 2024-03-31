@@ -339,3 +339,165 @@
             {
                 Console.Write(name[i] + " ");
             }
+
+#### Использование многомерного (двумерного) массива:
+    int[,] array = { { 1,2,3 }, { 5,6,7 }};
+		Console.WriteLine(array[0,0]);
+
+#### Использование цикла foreach в многомерном массиве:
+            int[,] array = { { 1, 2, 3 }, { 4, 5, 6 } };
+            
+            foreach (int item in array)
+            {
+                Console.Write(item + " ");
+            }
+
+#### Пересчёт элементов многомерного массива:
+            int[,] array = { { 1, 2, 3 }, { 5, 6, 7 } };
+
+            //Console.Write("Кол-во строк массива: ");
+            //Console.WriteLine(array.GetLength(0));
+
+            //Console.Write("Кол-во столбцов массива: ");
+            //Console.WriteLine(array.GetLength(1));
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for(int j = 0; j < array.GetLength(1); j++)
+                {
+                    Console.Write(array[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+
+#### Сортировка элементов массива:
+            int[] numbers = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            int nullNumber;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                for (int j = i + 1; j < numbers.Length; j++)
+                {
+                    if (numbers[i] > numbers[j])
+                    {
+                        nullNumber = numbers[i];
+                        numbers[i] = numbers[j];
+                        numbers[j] = nullNumber;
+                    }
+                }
+            }
+            foreach (int item in numbers)
+            {
+                Console.Write(item);
+            }
+
+#### Сумма элементов массива:
+            int[] numbers = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            var sum = 0;
+
+            foreach (int number in  numbers)
+            {
+                sum += number;
+            }
+
+            Console.WriteLine("Сумма чисел массива: " + sum);
+
+#### Перечисление значений массивов массива:
+            int[][] arr = new int[3][]; // Это пример инициализации зубчатого массива
+
+            arr[0] = new int[3] { 1, 2, 3 };
+            arr[1] = new int[6] { 1, 2, 3, 4, 5, 6 };
+            arr[2] = new int[4] { 1, 2, 3, 4 };
+
+            foreach (var array in arr)
+            {
+                foreach (var item in array)
+                {
+                    Console.Write(item);
+                }
+                Console.Write("\n");
+            }
+
+#### Нахождение нужных значений в массиве:
+            int[] numbers = new int[6] { -2, 3, -6, 4, 1, 0 };
+            int result = 0;
+            foreach (int item in numbers)
+            {
+                if (item >= 0)
+                    result++;
+            }
+            Console.WriteLine(result);
+
+#### Сортировка элементов многомерного массива:
+            int[,] numbers = { { -2, 3, 1 }, { 4, 1, 0 } };
+            int nullNumber;
+            for(int i = 0; i < numbers.GetLength(0); i++)
+            {
+                for(int j = 0; j < numbers.GetLength(1); j++)
+                {
+                    for (int k = j + 1; k < numbers.GetLength(1); k++)
+                    {
+                        if (numbers[i, j] > numbers[i, k])
+                        {
+                            nullNumber = numbers[i, j];
+                            numbers[i,j] = numbers[i, k];
+                            numbers[i, k] = nullNumber;
+                        }
+                    }
+                    Console.Write(numbers[i,j]);
+                }
+                Console.WriteLine();
+            }
+
+#### Синтаксис и вариант использование кортежа:
+            var anketa = (name: "Jane", age: 27);
+
+            Console.WriteLine("Ваше имя: {0}", anketa.name);
+            Console.WriteLine("Ваш возраст: {0}", anketa.age);
+
+#### Ввод данных в кортеж пользователем в кортеже:
+            (string name, int age) anketa; // Кортеж
+            anketa.name = Console.ReadLine();
+            anketa.age = Convert.ToInt32(Console.ReadLine());
+
+#### Анкета для трёх пользователей:
+            int Users = 3;
+            (string name, string lastName, string login, int loginLength, bool havePet, int userAge, string[] threeFavoriteColor) anketa;
+                for (int i = 0; i < Users; i++)
+                {
+                    Console.Write("Введите своё имя: ");
+                    anketa.name = Console.ReadLine();
+
+                    Console.Write("Введите свою фамилию: ");
+                    anketa.lastName = Console.ReadLine();
+
+                    Console.Write("Введите свой логин: ");
+                    anketa.login = Console.ReadLine();
+                    anketa.loginLength = anketa.login.Length;
+                    Console.WriteLine("Длина вашего логина: " + anketa.loginLength);
+
+                    Console.WriteLine("Есть ли у вас питомец? да/нет ");
+
+                    var otvet = Console.ReadLine();
+                        if (otvet == "да")
+                        {
+                            anketa.havePet = true;
+                        }
+                        else
+                        {
+                            anketa.havePet = false;
+                        }
+
+                    Console.Write("Введите ваш возраст: ");
+                    anketa.userAge = Convert.ToInt32(Console.ReadLine());
+
+                    anketa.threeFavoriteColor = new string[3];
+                    Console.WriteLine("Введите три своих любимых цвета: ");
+                        for (int j = 0; j < anketa.threeFavoriteColor.Length; j++)
+                        {
+                            anketa.threeFavoriteColor[j] = Console.ReadLine();
+                        }
+
+                    Console.ReadKey();
+                    Console.Clear();
+                    }
+                }
