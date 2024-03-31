@@ -263,4 +263,79 @@
                         continue;
                 }
             } while (true);
-    
+
+#### Пример инициализации массива с циклом foreach:
+        string[] favoriteColor = new string[3];
+            for (int i = 0; i < favoriteColor.Length; i++)
+            {
+                Console.WriteLine("Введите любимый цвет номер {0}", i + 1);
+                favoriteColor[i] = Console.ReadLine();
+            }
+         foreach (var color in favoriteColor)
+         {
+            switch (color)
+            {
+                case "red":
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("Your color is red!");
+                    break;
+
+                case "green":
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("Your color is green!");
+                    break;
+
+                case "cyan":
+                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("Your color is green!");
+                    break;
+
+                case "yellow":
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Red;
+
+                    Console.WriteLine("Your color is yellow!");
+                    break;
+
+                default:
+                    continue;
+                }
+            }
+
+#### Разновидности инициализаций переменных в массивах и использование свойства length - свойство массива, которое вернёт кол-во элементов массива:
+            //Размерность массива 
+            var arr = new int[] { 1, 2, 3, 4 };
+            var l = arr.Length;
+
+            //Разные виды инициализации массива
+            int[] arr1 = new int[4] { 1, 2, 3, 5 };
+            int[] arr2 = new int[] { 1, 2, 3, 5 };
+            int[] arr3 = new[] { 1, 2, 3, 5 };
+            int[] arr4 = { 1, 2, 3, 5 };
+
+#### Использование строки как массива:
+                Console.Write("Введите свё имя: ");
+                var name = Console.ReadLine();
+
+                Console.WriteLine("Ваше имя по буквам");
+                foreach (var ch in name)
+                {
+                    Console.Write(ch + " ");
+                }
+                Console.WriteLine("\n Последняя буква вашего имени: " + name[name.Length - 1]);
+
+#### Запись имени в обратном порядке:
+            Console.Write("Введите свё имя: ");
+            var name = Console.ReadLine();
+
+            Console.WriteLine("Ваше имя в обратном порядке: ");
+            for(int i = name.Length-1;  i >= 0; i--)
+            {
+                Console.Write(name[i] + " ");
+            }
