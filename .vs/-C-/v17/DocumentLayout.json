@@ -14,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 282,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "README.md",
               "ToolTip": "C:\\Users\\\u0418\u043B\u044C\u044F\\source\\repos\\-C-\\README.md",
               "RelativeToolTip": "README.md",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAuwEkAAAAAAAAA",
+              "ViewState": "AQIAALAAAAAAAAAAAAAwwMAAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2024-03-26T02:35:41.224Z",
               "EditorCaption": ""

@@ -186,7 +186,7 @@
                 Console.WriteLine("Your color is cyan!");
             }
 
-Использование switch-конструкции:
+#### Использование switch-конструкции:
 
             Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
 
@@ -222,3 +222,45 @@
             //* return — это выход из метода, применять его будем позже.
             //* goto case — позволяет перейти к другому условию внутри блока switch.
             //* throw применяется для выбора ошибок, и мы рассмотрим его в других модулях.
+
+#### Использование циклов и команды continue:
+            do
+            {
+                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+                var color = Console.ReadLine();
+
+                switch (color)
+                {
+                    case "red":
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is red!");
+                        break;
+
+                    case "green":
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is green!");
+                        break;
+
+                    case "cyan":
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is green!");
+                        break;
+
+                    case "yellow":
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Red;
+
+                        Console.WriteLine("Your color is yellow!");
+                        break;
+
+                    default:
+                        continue;
+                }
+            } while (true);
+    
