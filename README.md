@@ -361,9 +361,9 @@
             //Console.Write("Кол-во столбцов массива: ");
             //Console.WriteLine(array.GetLength(1));
 
-            for (int i = 0; i < array.GetLength(0); i++)
+            for (int i = 0; i < array.GetLength(0) /*Или GetUpperBould(0) + 1*/ ; i++)
             {
-                for(int j = 0; j < array.GetLength(1); j++)
+                for(int j = 0; j < array.GetLength(1) /*Или GetUpperBould(1) + 1*/; j++)
                 {
                     Console.Write(array[i, j] + " ");
                 }
