@@ -551,6 +551,53 @@
             return color;
         }
 
-#### 
+#### Оптимизированная программа введения массива и сортировка его:
+       static void Main(string[] args)
+        {
+            var result = new int[5];
+            GetArrayFromConsole(result);
+            Console.Write("Данный массив: ");
+            EnumArray(result);
+            SortArray(result);
+            Console.Write("\nОтсортированный массив: ");
+            EnumArray(result);
+        }
+
+        static int[] GetArrayFromConsole(int[] result)
+        {
+
+            for (int i = 0; i < result.Length; i++)
+            {
+                Console.WriteLine("Введите элемент массива номер {0}", i + 1);
+                result[i] = int.Parse(Console.ReadLine());
+            }
+            return result;
+        }
+
+        static int[] SortArray(int[] result)
+        {
+            int nullNumber;
+            for (int i = 0; i < result.Length; i++)
+            {
+                for (int j = i + 1; j < result.Length; j++)
+                {
+                    if (result[i] > result[j])
+                    {
+                        nullNumber = result[i];
+                        result[i] = result[j];
+                        result[j] = nullNumber;
+                    }
+                }
+            }
+            return result;
+        }
+        static int[] EnumArray(int[] result)
+        {
+            foreach (int value in result)
+            {
+                Console.Write(value + " ");
+            }
+            return result;
+        }
 ####
 ####
